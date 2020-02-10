@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Django Project</title>
+    <link rel="stylesheet" href='{% static "css/mystyle.css" %}' />
+  </head>
+  <body>
+    <h1>Django Project</h1>
+    <h2>Access Record</h2>
+
+    <div class="mytable">
+      {%if access_record %}
+      <table>
+        <thead>
+          <th>Site Name</th>
+          <th>Date Accessed</th>
+        </thead>
+        {% for acc in access_record %}
+        <tr>
+          <td>{{ acc.name }}</td>
+          <td>{{ acc.date }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+
+      {% else %}
+      <p>There is no record</p>
+      {% endif %}
+    </div>
+  </body>
+</html>

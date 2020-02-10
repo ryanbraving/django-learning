@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends 'basic_app/base.html' %}
+{% load my_custome_filter %}
+    {% block body_block %}
+        <h1> Welcome to Index!</h1>
+        <h1> This is index.html page showing!</h1>
+        {{ text|cut_filter:"world"}}
+        {{ number|add:"99" }}
+    {% endblock  %}
+                
+              

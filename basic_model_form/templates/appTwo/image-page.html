@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+	{% load staticfiles %}
+	<html>
+		<head>
+			<meta charset="UTF-8" />
+			<title>Django Guitar Page</title>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+            <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+        </head>
+		<body>
+			<h1>Hi, this is a picture of Django himself</h1>
+            <img src="{% static 'images/django.jpg' %}" alt='django image'>
+        </body>
+	</html>

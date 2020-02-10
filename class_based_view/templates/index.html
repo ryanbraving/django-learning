@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block body_block %}
+<div class="jumbotron">
+  <h1>Home Pgae!</h1>
+  <h2>Injected Content: {{ injectme }}</h2>
+  <h3>Number of Schools: {{ school_count }}</h3>
+  <h3>Number of Students: {{ student_count }}</h3>
+</div>
+{% endblock %}

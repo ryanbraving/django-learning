@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Django Project</title>
+		{% comment %} <link rel="stylesheet" href='{% static "css/mystyle.css" %}' /> {% endcomment %}
+	</head>
+	<body>
+		<h1>Here are your users fro AppTwo:</h1>
+		<div>
+			{% if users %}
+				<ol>
+					{% for usr in users %}
+						<li>User Info
+							<ul>
+								<li>First name: {{ usr.first_name }} </li>
+								<li>Last Name: {{ usr.last_name }} </li>
+								<li>Email: {{ usr.email }} </li>
+							</ul>
+						</li>
+					{% endfor %}
+				</ol>
+			{% endif %}
+		</div>
+	</body>
+</html>

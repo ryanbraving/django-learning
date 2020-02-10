@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>HOME</title>
+        {% comment %} <link rel="stylesheet" href='{% static "css/mystyle.css" %}' /> {% endcomment %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="jumbotron">
+                <h1> Welcome to Relative URL Templates!</h1>
+                {% comment %} <h2>Go to /formpage to fill out the form</h2> {% endcomment %}
+                <a href="{% url 'basic_app:other' %}">LINK TO OTHER PAGE</a>
+                <a href="{% url 'admin:index' %}">LINK TO ADMIN</a>
+                <a href="{% url 'index' %}">LINK TO INDEX</a>
+            </div>
+        </div>
+    </body>
+</html>
